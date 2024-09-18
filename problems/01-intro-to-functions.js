@@ -13,24 +13,30 @@ function getGreeting() { // DO NOT MODIFY THIS FUNCTION
 
 // 1. Define a variable called greeting and set the value to the return value of
 //    the getGreeting function above
-// Your code here 
 
+// console.log(getGreeting());
+
+let greeting = getGreeting();
+// console.log(greeting);
 
 
 // 2. Update the function below so that the fruit variable evaluates to a string
 //    of 'orange'
 function getFruit() {
-  return 'apple';
+  return 'orange';
 }
 
 let fruit = getFruit(); // DO NOT MODIFY THIS LINE OF CODE
-
+// console.log("fruit:", fruit);
 
 
 // 3. Define a function called getSingleDigitInteger that returns any integer
 //    from 0 to 9
-// Your code here 
+function getSingleDigitInteger(){
 
+  return 5;
+}
+// console.log(getSingleDigitInteger());
 // Run the following command in the terminal to run this file if you want
 // print something to test:
 // node problems/01-intro-to-functions.js
