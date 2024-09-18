@@ -11,9 +11,19 @@ npm test test/03-string-operators-spec.js
 //    Return the first and last letter of the string as one uppercase string
 //    to create a short hand version of the string.
 //    Eg: If the input string is 'hello', then the function should return 'HO'
-// Your code here 
 
 
+function shortHandStr(string){
+
+  let firstLetter = string[0].toUpperCase();
+  let lastLetter = string[string.length - 1].toUpperCase();
+  // console.log(firstLetter, lastLetter);
+
+  // return firstLetter + lastLetter;
+  return string[0].toUpperCase() + string[string.length - 1].toUpperCase();
+}
+
+// console.log(shortHandStr('hello'));// 'HO'
 
 // 2. Define a function called makeFirstLowerCased that takes in two string
 //    parameters. The first parameter is a string to modify, the second, a
@@ -26,9 +36,20 @@ npm test test/03-string-operators-spec.js
 //    HINT: Research the following String operators on MDN:
 //      * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf
 //      * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/substring
-// Your code here 
 
-//    Write your own tests for makeFirstLowerCased that print the function's 
+function makeFirstLowerCased(string, char) {
+
+  // console.log(string, char);
+  const index = string.indexOf(char);
+  // console.log(index);// 2
+  const firstHalf = string.substring(0, index);
+  const secHalf = string.substring(index + 1);
+  // console.log(firstHalf + char.toLowerCase() + secHalf);
+
+  return firstHalf + char.toLowerCase() + secHalf;
+}
+// console.log(makeFirstLowerCased("HELLO", "L"));// HE l LO
+//    Write your own tests for makeFirstLowerCased that print the function's
 //    return value to the terminal.
 
 //    Run the following command in the terminal to run this file and see the

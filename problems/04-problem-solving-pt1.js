@@ -12,17 +12,28 @@ npm test test/04-problem-solving-pt1-spec.js
 
 // magic number = (total number of games) - (number of wins by 1st place team) - (number of losses by the 2nd place team) + 1
 
-// The magicNumber function takes in the total number of games as the first 
+// The magicNumber function takes in the total number of games as the first
 // parameter, the number of wins by the 1st place team as the second parameter,
 // and the number of losses by the 2nd place team as the last parameter. It
 // returns the magic number as calculated using the formula above.
 
 function magicNumber(numGames, numWins1stPlace, numLosses2ndPlace) {
   let magicNum = numGames;
+  // console.log("magicNum:", magicNum);// 162
+
   magicNum -= numWins1stPlace;
-  magicNum = magicNum + numLosses2ndPlace;
-  return magicNum++;
+  // console.log("magicNum:", magicNum);// 90
+
+  // magicNum = magicNum + numLosses2ndPlace;
+  magicNum = magicNum - numLosses2ndPlace;
+  // console.log("magicNum:", magicNum);// 40
+
+  // magicNum++
+  return ++magicNum
 }
+
+// console.log(magicNumber(162, 72, 50));// 40
+// (162,) - (72) - (50) + 1 ->>
 
 
 // Write your own tests for magicNumber that print the function's return value

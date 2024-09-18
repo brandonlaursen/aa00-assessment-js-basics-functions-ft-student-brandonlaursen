@@ -7,11 +7,20 @@ npm test test/05-problem-solving-pt2-spec.js
 
 // Run the test specs, then read each test spec's description printed in the
 // console to figure out what this function's criteria is and how it's supposed
-// to work. Then, modify the code to make all the test specs pass. 
-function startsWith(substr) {
-  return str.indexOf(substr) === 1;
+// to work. Then, modify the code to make all the test specs pass.
+
+
+function startsWith(str, substr) {
+console.log(str, substr);
+
+  // racecar.indexOf(race) === 1;
+  console.log(str.indexOf(substr));
+
+  return str.indexOf(substr) === 0;
 }
 
+
+console.log(startsWith('racecar', 'race'));
 
 // Write your own tests for startsWith that print the function's return value
 // to the terminal.
